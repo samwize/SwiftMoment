@@ -27,67 +27,55 @@ extension Moment {
             // Just Now
             return NSDateTimeAgoLocalizedStrings("Just now")
 
-        }
-        else if deltaSeconds < Moment.minuteInSeconds {
+        } else if deltaSeconds < Moment.minuteInSeconds {
             // Seconds Ago
             return stringFromFormat("%%d %@seconds ago", withValue: Int(deltaSeconds))
 
-        }
-        else if deltaSeconds < (Moment.minuteInSeconds * 2) {
+        } else if deltaSeconds < (Moment.minuteInSeconds * 2) {
             // A Minute Ago
             return NSDateTimeAgoLocalizedStrings("A minute ago")
 
-        }
-        else if deltaSeconds < Moment.hourInSeconds {
+        } else if deltaSeconds < Moment.hourInSeconds {
             // Minutes Ago
             return stringFromFormat("%%d %@minutes ago", withValue: Int(deltaSeconds / Moment.minuteInSeconds))
 
-        }
-        else if deltaSeconds < (Moment.hourInSeconds * 2) {
+        } else if deltaSeconds < (Moment.hourInSeconds * 2) {
             // An Hour Ago
             return NSDateTimeAgoLocalizedStrings("An hour ago")
 
-        }
-        else if deltaSeconds < Moment.dayInSeconds {
+        } else if deltaSeconds < Moment.dayInSeconds {
             // Hours Ago
             value = floor(deltaSeconds / Moment.hourInSeconds)
             return stringFromFormat("%%d %@hours ago", withValue: Int(value))
 
-        }
-        else if deltaSeconds < (Moment.dayInSeconds * 2) {
+        } else if deltaSeconds < (Moment.dayInSeconds * 2) {
             // Yesterday
             return NSDateTimeAgoLocalizedStrings("Yesterday")
 
-        }
-        else if deltaSeconds < Moment.weekInSeconds {
+        } else if deltaSeconds < Moment.weekInSeconds {
             // Days Ago
             value = floor(deltaSeconds / Moment.dayInSeconds)
             return stringFromFormat("%%d %@days ago", withValue: Int(value))
 
-        }
-        else if deltaSeconds < (Moment.weekInSeconds * 2) {
+        } else if deltaSeconds < (Moment.weekInSeconds * 2) {
             // Last Week
             return NSDateTimeAgoLocalizedStrings("Last week")
 
-        }
-        else if deltaSeconds < Moment.monthInSeconds {
+        } else if deltaSeconds < Moment.monthInSeconds {
             // Weeks Ago
             value = floor(deltaSeconds / Moment.weekInSeconds)
             return stringFromFormat("%%d %@weeks ago", withValue: Int(value))
 
-        }
-        else if deltaSeconds < (Moment.dayInSeconds * 61) {
+        } else if deltaSeconds < (Moment.dayInSeconds * 61) {
             // Last month
             return NSDateTimeAgoLocalizedStrings("Last month")
 
-        }
-        else if deltaSeconds < Moment.yearInSeconds {
+        } else if deltaSeconds < Moment.yearInSeconds {
             // Month Ago
             value = floor(deltaSeconds / Moment.monthInSeconds)
             return stringFromFormat("%%d %@months ago", withValue: Int(value))
 
-        }
-        else if deltaSeconds < (Moment.yearInSeconds * 2) {
+        } else if deltaSeconds < (Moment.yearInSeconds * 2) {
             // Last Year
             return NSDateTimeAgoLocalizedStrings("Last year")
         }

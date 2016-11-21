@@ -413,6 +413,9 @@ public func minimum(_ moments: Moment...) -> Moment? {
 /// Internal structure used by the `moment()` family of functions.
 /// It wraps a Foundation `Date`, a `TimeZone` and a `Locale` value.
 /// To create one of these values, call one of the `moment()` family of functions.
+
+// swiftlint:disable type_body_length
+// swiftlint:disable file_length
 public struct Moment: Comparable {
     internal static let minuteInSeconds: Double = 60
     internal static let hourInSeconds: Double = 3600
@@ -1014,3 +1017,5 @@ extension Moment: CustomDebugStringConvertible {
         return description
     }
 }
+// swiftlint:enable type_body_length
+// swiftlint:enable file_length

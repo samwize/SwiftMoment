@@ -10,6 +10,7 @@ import Foundation
 import XCTest
 import SwiftMoment
 
+// swiftlint:disable type_body_length
 class MomentTests: XCTestCase {
 
     override func setUp() {
@@ -691,5 +692,5 @@ class MomentTests: XCTestCase {
         XCTAssertEqual(now.format(), str1)
         XCTAssertEqual(now.format(), str2)
     }
-
 }
+// swiftlint:enable type_body_length

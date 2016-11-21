@@ -91,7 +91,7 @@ class ExtensionsTests: XCTestCase {
         XCTAssertEqual(3.years, Duration(value: 31536000 * 3),
                        "The Duration instance by three years is returned")
     }
-    
+
     func testCanReturnSecondsDurationAsDouble() {
         XCTAssertEqual(1.5.seconds, Duration(value: 1 * 1.5),
                        "The Duration instance by 1.5 seconds is returned")
@@ -163,5 +163,4 @@ class ExtensionsTests: XCTestCase {
         XCTAssertEqual(3.5.years, Duration(value: 31536000 * 3.5),
                        "The Duration instance by 3.5 years is returned")
     }
-    
 }

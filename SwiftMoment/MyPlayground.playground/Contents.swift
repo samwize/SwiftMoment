@@ -26,9 +26,9 @@ let moments = [pavon, gettysburg, meierskappel]
 let sorted = moments.sorted(by: <)
 print(sorted)
 
-let p = past()
-let f = future()
+let past = past()
+let future = future()
 
 // Maximum and minimum
-let max = maximum(f, now, p) // f, of course
-let min = minimum(p, f, now) // p, of course
+let max = maximum(future, now, past) // f, of course
+let min = minimum(past, future, now) // p, of course
